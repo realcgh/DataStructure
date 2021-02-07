@@ -55,6 +55,10 @@ class Tree():
                         temp=this_node.data
                         this_node.data=this_node.right.data
                         this_node.right.data=temp
+                    elif this_node.left.data<this_node.data:
+                        temp=this_node.data
+                        this_node.data=this_node.left.data
+                        this_node.left.data=temp
                         if this_node.parent is not None:
                             self.bottomSwap(this_node.parent)
 
